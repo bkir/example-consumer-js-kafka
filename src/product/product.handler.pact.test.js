@@ -23,10 +23,10 @@ describe("Kafka handler", () => {
         .expectsToReceive("a product event update")
         .withContent({
           id: like("some-uuid-1234-5678"),
-          type: like("Product Range"),
+          type: like("Product Range 12345"),
           name: like("Some Product"),
           version: like("v1"),
-          event: term({ generate: "UPDATED", matcher: "^(CREATED|UPDATED|DELETED)$" }),
+          event: term({ generate: "BONK", matcher: "^(CREATED|UPDATED|DELETED)$" }),
         })
         .withMetadata({
           "content-type": "application/json",
