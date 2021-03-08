@@ -25,7 +25,7 @@ describe("Kafka handler", () => {
           id: like("sluuurp"),
           type: like("goop doop"),
           name: like("Poop Town USA"),
-          foo: 'bar',
+          // foo: 'bar',
           version: like("v2"),
           event: term({ generate: "UPDATED", matcher: "^(CREATED|UPDATED|DELETED)$" }),
         })
