@@ -22,11 +22,11 @@ describe("Kafka handler", () => {
       return messagePact
         .expectsToReceive("a product event update")
         .withContent({
-          id: like("some-uuid-1234-5678"),
-          type: like("Product Range 12345"),
-          name: like("Some Product"),
-          version: like("v1"),
-          event: term({ generate: "BONK", matcher: "^(CREATED|UPDATED|DELETED)$" }),
+          id: like("sluuurp"),
+          type: like("goop doop"),
+          name: like("Poop Town USA"),
+          version: like("v2"),
+          event: term({ generate: "UPDATED", matcher: "^(CREATED|UPDATED|DELETED)$" }),
         })
         .withMetadata({
           "content-type": "application/json",
