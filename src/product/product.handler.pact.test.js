@@ -22,7 +22,7 @@ describe("Kafka handler", () => {
       return messagePact
         .expectsToReceive("a product event update")
         .withContent({
-          id: like(1),
+          id: like("1"),
           type: like("goop doop"),
           name: like("Poop Town USA"),
           // foo: 'bar',
